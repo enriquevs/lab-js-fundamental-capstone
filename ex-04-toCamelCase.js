@@ -11,22 +11,18 @@
 
  // ++ YOUR CODE HERE
 
-  function toCamelCase(txt){
+  function toCamelCase(str){
+    //tomar array de palabras del string
+     var words = str.split(' ');
+     //iterar sobre el array
+     for (var i = 0; i < words.length; i++) {
+       //convertimos todas las letras a minusculas
+       words[i] = words[i].toLowerCase();
 
-     var arrToChange = txt.split(' ');
-
-     for (let i = 1; i < arrToChange.length; i++) {
-
-       var eachWord  = arrToChange[i];
-
-
-       arrToChange[i] = eachWord[0].toUpperCase() + eachWord.slice(1).toLowerCase();
-
+       words[i] = words.replace(words[i][0], words[i][0].toUpperCase()) + words[i].slice(1);
      }
-     
-     return arrToChange.join('');
-  }
-
+     return words.join("");
+}
 
 
 

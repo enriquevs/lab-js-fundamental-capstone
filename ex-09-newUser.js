@@ -20,6 +20,23 @@
 
 // ++ YOUR CODE HERE
 
+function User(name, role) {
+  var userObj = {
+    "name" : name,
+    "role" : role,
+    "createdAt" : Date.now(),
+    hasPermissions(roleList) {
+      for (var i = 0; i < roleList.length; i++) {
+        if(roleList[i] === userObj.role) {
+          return true;
+        }
+      }
+      return false;
+    }
+  };
+  return userObj;
+}
+
 
 
 

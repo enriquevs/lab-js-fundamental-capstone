@@ -11,36 +11,30 @@
 
 
  // ++ YOUR CODE HERE
- function where(array, objProp){
+function where(listOfObjects, objProperty){
+//declarar variable array
+  var newListOfObjects = [];
+//iterar sobre el arreglo de objetos
+  for (var i = 0; i < listOfObjects.length; i ++){
 
-   var newArray = []
+    var objInListOfObjects = listOfObjects[i];
 
-   for(var i = 0; i < array.length; i++) {
+    var found = true;
 
-     var titles = array[i]
+    for (key in objProperty){
 
-     var counter = 0;
+      if (objProperty[key] != objInListOfObjects[key]){
 
-     for (var prop1 in titles) {
+        found = false;
+      }
+    }
+    if (found === true){
 
-       for(var prop2 in objProp) {
-
-         if( titles[prop1] === objProp[prop2]) {
-
-           counter++;
-         }
-       }
-     }
-
-     if (counter === Object.keys(objProp).length) {
-       newArray.push(titles);
-     }
-   }
-
-   return newArray;
-
+      newListOfObjects.push(objInListOfObjects);
+    }
   }
-
+  return newListOfObjects;
+}
 
 
 

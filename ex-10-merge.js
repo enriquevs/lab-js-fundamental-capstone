@@ -12,7 +12,17 @@
 
 
 // ++ YOUR CODE HERE
+function merge(obj1, obj2){
 
+  var obj = {};
+
+  for (var key in obj1) {
+
+    obj[key] = obj1[key]
+
+  for  
+  }
+}
 
 
 
